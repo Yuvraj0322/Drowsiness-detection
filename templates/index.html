@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drowsiness Detector System</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="C:\Users\SHARATH\OneDrive\Desktop\FinalProject\static\icon.jpeg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/background2.gif'); /* Specify the path to your background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            color: rgb(51, 51, 51); /* Dark gray text color */
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 120px auto;
+            padding: 40px;
+            background-color: rgba(225,225,225, 0.8); /* White container background color with some transparency */
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(51,51,51, 0.1);
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .container:hover {
+            transform: scale(1.05); /* Enlarge the container on hover */
+        }
+
+        h1 {
+            text-align: center;
+            color: red; /* Red heading color */
+            margin-bottom: 20px; /* Add bottom margin to create space */
+            animation: colorChange 1s infinite alternate; /* Apply animation */
+        }
+
+        @keyframes colorChange {
+            from {
+                color: red; /* Starting color */
+            }
+            to {
+                color: rgb(0, 0, 255); /* End color */
+            }
+        }
+
+        p {
+            margin-bottom: 20px;
+            line-height: 1.7;
+            color: rgb(0,0,0); /* Black color */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(0, 0, 255); /* Blue button background color */
+            color: #fff; /* White text color */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer; /* Add cursor pointer on hover */
+        }
+
+        .button:hover {
+            background-color: rgb(0, 86, 179); /* Dark blue button background color on hover */
+        }
+
+        a {
+            color: rgb(0, 0, 255); /* Light blue link color */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Driver Drowsiness - Detection System</h1>
+        <center><p>Welcome to the Drowsiness Detector System. This system helps in detecting drowsiness of drivers to prevent accidents.</p></center>
+        <p>Whether it’s due to medication, a sleep disorder or a poor night’s rest, new research points to the risks and potential 
+            dangers of drowsy driving. Missing one to two hours of the recommended seven hours of sleep a night nearly doubles the risk of a car accident.
+            Sleepiness can come without warning, so drivers should prioritize getting enough sleep and avoid driving.</p>
+        <p>To start monitoring, click the button below:</p>
+        <button id="startMonitoringButton" class="button">Start Monitoring</button>
+        <p>For more information, visit our <a href="/about">About</a> page.</p>
+    </div>
+    <script>
+        document.getElementById("startMonitoringButton").addEventListener("click", function() {
+            startMonitoring();
+        });
+
+        function startMonitoring() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/start_detection", true);
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

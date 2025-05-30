@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="icon" type="image/jpeg" href="/static/icon.jpeg">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(150,150,150,0.5); /* Transparent gray background */
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .section {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #333; /* Dark border */
+        }
+
+        .section h2 {
+            color: #0056b3;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .info-profile-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .info-profile {
+            padding: 20px;
+            border-radius: 8px;
+            width: calc(50% - 20px);
+            border: 1px solid #ddd;
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .info-profile:hover {
+            transform: scale(1.1); /* Enlarge the photo on hover */
+        }
+
+        .info-details {
+            margin-top: 20px;
+        }
+
+        .info-details h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .info-details p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .info-details a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .info-details a:hover {
+            text-decoration: underline;
+        }
+
+        .project-info {
+            margin-top: 20px;
+            font-size: 14px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        .project-info p {
+            margin: 5px 0;
+        }
+
+        .project-info ul {
+            padding-left: 20px;
+            margin-top: 0;
+        }
+
+        .project-info ul li {
+            list-style-type: disc;
+            margin-bottom: 5px;
+        }
+
+        .info-profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Make image circular */
+            object-fit: cover; /* Ensure the image covers the space properly */
+        }
+
+        .copyright {
+            margin-top: 30px;
+            text-align: center;
+            color: #000; /* Black color for copyright text */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <h2>Developers</h2>
+            <div class="info-profile-container">
+                <div class="info-profile">
+                    <div class="info-details">
+                        <h3>Yuvraj kumar</h3>
+                        <p>Student</p>
+                        <p>Email: yuvrajkumar0322@gmail.com</p>
+                        <p>Phone: +91 6362251603</p>
+                        <p>Major: CSE</p>
+                        <p>RegNo: 1BH21CS111 </p>
+                    </div>
+                </div>
+                <div class="info-profile">
+                    <div class="info-details">
+                        <h3>Sahana B</h3>
+                        <p>Student</p>
+                        <p>Email: sahanab1805@gmail.com</p>
+                        <p>Phone: +91 7483049382</p>
+                        <p>Major: AI&ML </p>
+                        <p>RegNo: 1BH21AI017 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Education Information</h2>
+            <div class="info-profile-container">
+                <div class="info-profile">
+                    <div class="info-details">
+                        <h3>Bangalore Technological Institute</h3>
+                        <p>Location: Bangalore, India</p>
+                    </div>
+                </div>
+                <div class="info-profile">
+                    <div class="info-details">
+                        <h3>Bangalore Technological Institute</h3>
+                        <p>Location: Bangalore, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" style="grid-column: 1 / -1;"> <!-- Full width for the project section -->
+            <h2>Project Information</h2>
+            <div class="project-info">
+                <p>This project is aimed at developing a Drowsiness Detector System to prevent accidents caused by drowsy driving. Key features include:</p>
+                <ul>
+                    <li>Real-time monitoring of driver drowsiness</li>
+                    <li>Alert system using sound and visual cues</li>
+                    <li>Integration with vehicle systems</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2024 Driver Drowsiness-Detection System. All rights reserved.
+    </div>
+</body>
+</html>
